@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+.Board {
+  margin: 0 auto;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.Board-cover {
+  position: absolute;
+  /* margin: 0;
+  padding: 0; */
+  z-index: 1000;
+  margin: 2px;
+  margin: auto;
+  border-radius: 1rem;
+  text-align: center;
+  margin: auto;
+  color: green;
+  font-weight: bolder;
+  border: 1px solid red;
+  background: rgb(173, 216, 230, 0.7) no-repeat fixed center;
+  /* border: 2px; */
+}
+
+.Board-cover span {
+  cursor: pointer;
+}
+
+.playing span {
+  cursor: pointer;
+}
+
+.Board-info {
+  display: block;
+  color: #2c3e50;
+  font-size: 10px;
+  line-height: 0;
+  transform: translateY(-14em);
+  cursor: pointer;
+  /* position: absolute; */
+}
+
+.timeout {
+  /* line-height: 0; */
+}
+
+.timeout h2,
+.won h2 {
+  top: -10px;
+  /* transform: translateY(-70px); */
+  font-size: 70%;
+}
+
+.won p {
+  font-size: 40%;
+  line-height: 1;
+  margin: 2px;
+}
+
+.won span {
+  position: absolute;
+  top: calc(50% - 0.25em);
+  left: calc(50% - 0.5em);
+  opacity: 0.8;
+  z-index: 1000;
+}
+
+.won-giphy {
+}
+
+.timeout {
+  color: red;
+}
+
+.won {
+  color: green;
+  opacity: 1;
+}
+
+.Board-cover input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+/* Accordion styles */
+.Board-info-tab {
+  color: #25303b;
+  line-height: 1;
+  overflow: hidden;
+}
+.Board-cover .tab-label {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  /* background: #2c3e50; */
+  font-weight: bold;
+  cursor: pointer;
+  /* Icon */
+}
+.Board-cover .tab-label:hover {
+  background: rgb(26, 37, 47, 0.3);
+}
+.Board-cover .tab-label::after {
+  content: "\276F";
+  margin-left: 1em;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.Board-cover .tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: white;
+  transition: all 0.35s;
+  font-family: "Source Sans Pro";
+  letter-spacing: 0.4px;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  text-justify: distribute;
+  word-wrap: break-word;
+  word-spacing: 4px;
+  box-sizing: content-box;
+}
+.Board-cover .tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+.Board-cover .tab-close:hover {
+  background: rgb(26, 37, 47, 0.3);
+}
+.Board-cover input:checked + .tab-label {
+  background: rgb(26, 37, 47, 0.3);
+}
+.Board-cover input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+.Board-cover input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.Board table {
+  margin: 0 auto;
+  box-shadow: 0 0 40px pink;
+}
+
+table {
+  /* border-radius: 10px; */
+  background-color: inherit;
+}
+table td,
+table tbody {
+  /* border-radius: 10px; */
+  background-color: inherit;
+}
+/*
+ * First normalise some of the attributes
+ */
+
+table td,
+table tbody {
+  /* padding: 0.5rem; */
+  text-align: left;
+  vertical-align: top;
+}
+/*
+ * Add the border, set border spacing etc
+ * The left width is 0 so cell border can be applied without doubling up.
+ */
+
+table {
+  border: 2px solid darkgray;
+  border-left-width: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 1rem;
+}
+/*
+ * Add the border to table cell/header
+*/
+
+table td,
+table tbody {
+  border-top: 2px solid darkgray;
+  border-left: 2px solid darkgray;
+}
+/*
+ * Remove the top border from the first header/cell
+ */
+
+table tbody:first-child tr:first-child td,
+table tbody:first-child tr:first-child td {
+  border-top-width: 0;
+}
+/*
+ * Set the border radius for the first header/cell
+ */
+
+table tbody:first-child tr:first-child td:first-child,
+table tbody:first-child tr:first-child th:first-child {
+  border-top-left-radius: 0.85rem;
+}
+
+table tbody:first-child tr:first-child td:last-child {
+  border-top-right-radius: 0.85rem;
+}
+/*
+ * Set the border radius for the last header/cell
+ */
+
+table tbody:last-child tr:last-child td:first-child,
+table tbody:last-child tr:last-child {
+  border-bottom-left-radius: 0.85rem;
+}
+
+table tbody:last-child tr:last-child td:last-child {
+  border-bottom-right-radius: 0.85rem;
+}
+
+.Winner {
+  position: absolute;
+  top: 0;
+  margin-top: 2px;
+  color: rgb(0, 13, 128);
+  z-index: 100;
+  /* top: 0; */
+  transform: translate(290px, 160px);
+}
+
+.Winner h2 {
+  font-size: 3em;
+  font-weight: bolder;
+  color: darkblue;
+  margin-bottom: 2px;
+}
